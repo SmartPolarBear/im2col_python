@@ -1,5 +1,7 @@
 import numpy as np
 
+from numpy.lib.stride_tricks import as_strided
+
 
 def im2col(x: np.ndarray, kernel_h, kernel_w) -> np.ndarray:
     """
