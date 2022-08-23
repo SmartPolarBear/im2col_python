@@ -42,8 +42,3 @@ def view_as_windows(arr_in: np.ndarray, window_shape, step=1):
     strides = tuple(list(indexing_strides) + list(window_strides))
     arr_out = as_strided(arr_in, shape=new_shape, strides=strides)
     return arr_out
-
-
-data = np.array(np.random.permutation(np.arange(stop=4 * 4 * 3)).reshape((3, 4, 4)), dtype=np.int64)
-# print(data)
-print(view_as_windows(data, (3, 3, 3)).shape)
